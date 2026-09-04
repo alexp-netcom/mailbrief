@@ -1,0 +1,31 @@
+From: Colleague <colleague@example.com>
+To: user@example.com
+Cc: colleague@example.com
+Subject: Meeting invitation
+Date: Mon, 31 Aug 2026 09:26:47 +0300
+Message-ID: <synthetic-calendar@example.com>
+MIME-Version: 1.0
+Content-Type: text/calendar; method=REQUEST; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+Content-Language: en
+
+
+BEGIN:VCALENDAR
+PRODID:-//Example//Calendar//EN
+VERSION:2.0
+METHOD:REQUEST
+BEGIN:VEVENT
+ATTENDEE;CN=Colleague;RSVP=TRUE:mailto:colleague@example.com
+ATTENDEE;CN=user@example.com;ROLE=OPT-PARTICIPANT;RSVP=TRUE:mailto:user@example.com
+CLASS:PUBLIC
+CREATED:20260831T062647Z
+DTSTART:20260831T110000Z
+DTEND:20260831T113000Z
+DTSTAMP:20260831T062647Z
+LOCATION:Conference room
+ORGANIZER;CN=Colleague:mailto:colleague@example.com
+SEQUENCE:0
+SUMMARY:Planning meeting
+UID:synthetic-calendar-uid-0001
+END:VEVENT
+END:VCALENDAR

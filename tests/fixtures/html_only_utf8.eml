@@ -1,0 +1,16 @@
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+Date: Tue, 01 Sep 2026 13:16:32 +0000 (UTC)
+From: Team <team@vendor.example.com>
+Mime-Version: 1.0
+Message-ID: <synthetic-html@example.com>
+Subject: Monthly update
+Reply-To: team@vendor.example.com
+To: mailbox@example.com
+
+
+<html><body>
+<p>Monthly update: a summary of what changed this month.</p>
+<p>We shipped faster search, more accurate results, and cleaner reports.</p>
+<p>Thanks for reading.</p>
+</body></html>

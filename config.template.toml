@@ -1,0 +1,52 @@
+# mailbrief config — copy this file to `config.toml` (same folder) and replace
+# the example values with yours. This template is never used at runtime; it is
+# only a starting point.
+
+# ---------------------------------------------------------------------------
+# TOP-LEVEL SETTINGS. Keep these ABOVE the [[accounts]] section below — TOML
+# treats anything written after [[accounts]] as part of that account, and the
+# program will reject it with a clear error if you get this wrong.
+# ---------------------------------------------------------------------------
+
+# addresses — your own email address(es). Used to work out which mail is really
+# addressed to you (vs. cc/bulk). Best filled in from
+# `python -m mailbrief whoami` after your first fetch. Example:
+addresses = ["you@example.com"]
+
+# bulk_domains — sender domains that are ALWAYS bulk (marketing, alerts, etc.).
+# Leave empty to start. Example: ["newsletters.example.com"]
+bulk_domains = []
+
+# never_bulk_senders — addresses that are never bulk, even if they look like
+# it. Leave empty to start. Example: ["boss@example.com"]
+never_bulk_senders = []
+
+# direct_max_recipients — how many people a message may be sent to (To + Cc)
+# before it stops counting as "directly to you". The default 5 is a good start.
+direct_max_recipients = 5
+
+# packet_max_chars — how long the raw briefing packet may be before the tool
+# starts trimming. 40000 is a good start; raise it if briefings feel too short.
+packet_max_chars = 40000
+
+# telegram_chat_ids — the Telegram chats allowed to command the bot. Only
+# needed for the phone briefing. Discover yours with
+# `python -m mailbrief telegram-whoami`, then paste it in. Example: ["123456789"]
+telegram_chat_ids = []
+
+# briefing_dir — the folder where finished briefings are saved as dated
+# Markdown files. Required for /brief (in Claude Code) and for Telegram. Use
+# forward slashes. Example:
+briefing_dir = "C:/Users/you/Documents/Email Briefings"
+
+# ---------------------------------------------------------------------------
+# ACCOUNTS — the mailbox(es) to read. Everything is read-only: mailbrief can
+# never send, delete, move, or mark anything read.
+# ---------------------------------------------------------------------------
+[[accounts]]
+name = "primary"                # any name you like; shown in the output
+host = "imap.example.com"       # your mail server (the IMAP hostname)
+port = 993                      # 993 is standard for secure IMAP; rarely changed
+username = "you@example.com"    # your email address (what you log in with)
+auth = "password"               # leave as "password"
+folders = ["INBOX", "Sent"]     # folders to read; "Sent" lets it see your replies

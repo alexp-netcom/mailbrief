@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Mail data and real config live outside this repo, in %USERPROFILE%\.mailbrief
+# Never commit any of it here.
+
+# Secrets and local overrides (defense in depth - the real config lives in
+# %USERPROFILE%\.mailbrief\, but keep any local copy out of version control).
+.env
+config.toml
+password.txt
+*.token
+*.pem

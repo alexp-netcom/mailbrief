@@ -1,0 +1,6 @@
+# Python 3.11+ required (uses tomllib). Developed on 3.13.
+#
+# `keyring` is the only third-party dependency; it stores the mailbox password
+# and the Telegram bot token in the OS credential store (Windows Credential
+# Manager). Everything else is the standard library.
+keyring==25.7.0
